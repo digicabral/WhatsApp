@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1082797271804",
+    "firebase_url": "https://whatsapp-e8c74.firebaseio.com",
+    "project_id": "whatsapp-e8c74",
+    "storage_bucket": "whatsapp-e8c74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082797271804:android:fff845117f165e13",
+        "android_client_info": {
+          "package_name": "cabral.com.br.whatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082797271804-mb2fn56t4h49ktenavp68uj2179n4v7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cabral.com.br.whatsapp",
+            "certificate_hash": "68f29daf66b215092ae1a330be8ba7b8bec258ae"
+          }
+        },
+        {
+          "client_id": "1082797271804-8l2pc38p8840bqj2jl2edk7s2l3nuejd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPbCpGdIsIdwtO5gIWDHiLPOWnRF1ipsk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082797271804-8l2pc38p8840bqj2jl2edk7s2l3nuejd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
