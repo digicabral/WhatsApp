@@ -56,7 +56,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Button"
         android:textColor="@color/textColorPrimary"
         tools:text="@string/botao_validar" />
 
