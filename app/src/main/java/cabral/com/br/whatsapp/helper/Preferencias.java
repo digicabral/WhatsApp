@@ -27,8 +27,8 @@ public class Preferencias {
     public void salvarUsuarioPreferencias(String nome, String telefone, String token){
 
         editor.putString(CHAVE_NOME, nome);
-        editor.putString(CHAVE_TELEFONE, nome);
-        editor.putString(CHAVE_TOKEN, nome);
+        editor.putString(CHAVE_TELEFONE, telefone);
+        editor.putString(CHAVE_TOKEN, token);
         editor.commit();
     }
 

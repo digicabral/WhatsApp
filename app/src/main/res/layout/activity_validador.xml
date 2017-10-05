@@ -56,6 +56,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimaryDark"
+        android:text="@string/botao_validar"
         android:textColor="@color/textColorPrimary"
         tools:text="@string/botao_validar" />
 
