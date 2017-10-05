@@ -10,9 +10,11 @@ import android.widget.EditText;
 import com.github.rtoshiro.util.format.SimpleMaskFormatter;
 import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import cabral.com.br.whatsapp.R;
+import cabral.com.br.whatsapp.helper.Preferencias;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -59,6 +61,11 @@ public class LoginActivity extends AppCompatActivity {
                 Random randomico = new Random();
                 int numeroRandomico = randomico.nextInt(9999 - 1000) + 1000;
                 String token = String.valueOf(numeroRandomico);
+
+                Preferencias preferencias = new Preferencias(LoginActivity.this);
+                preferencias.salvarUsuarioPreferencias(nomeUsuario, telefoneSemFormatacao, token);
+
+                HashMap<String, String> usuario = preferencias.getDadosUsuario();
 
             }
         });
