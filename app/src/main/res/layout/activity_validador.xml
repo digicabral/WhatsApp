@@ -38,7 +38,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edit_cod_validacao"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -49,10 +49,10 @@
         android:textColor="@color/textColorPrimary" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/bt_validar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText5"
+        android:layout_below="@+id/edit_cod_validacao"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimaryDark"
