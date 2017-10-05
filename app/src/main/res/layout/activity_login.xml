@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:gravity="center_vertical|center_horizontal"
     tools:context="cabral.com.br.whatsapp.activity.LoginActivity">
 
     <ImageView
@@ -16,63 +17,51 @@
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/edit_nome"
-        android:layout_width="fill_parent"
+        android:id="@+id/et_login_email"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="58dp"
         android:ems="10"
-        android:hint="Digite Seu Nome"
-        android:inputType="textPersonName"
+        android:hint="Digite seu e-mail"
+        android:inputType="textEmailAddress"
         android:textColor="@color/textColorPrimary" />
 
     <EditText
-        android:id="@+id/edit_cod_pais"
-        android:layout_width="50dp"
+        android:id="@+id/et_login_senha"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit_nome"
+        android:layout_below="@+id/et_login_email"
         android:layout_marginTop="18dp"
         android:ems="10"
-        android:hint="+55"
-        android:inputType="number"
+        android:hint="Digite sua senha"
+        android:inputType="textPassword"
         android:textColor="@color/textColorPrimary" />
-
-    <EditText
-        android:id="@+id/edit_cod_area"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/edit_cod_pais"
-        android:layout_toRightOf="@+id/edit_cod_pais"
-        android:ems="10"
-        android:hint="21"
-        android:inputType="number"
-        android:textColor="@color/textColorPrimary" />
-
-    <EditText
-        android:id="@+id/edit_telefone"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btCadastrar"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:ems="10"
-        android:hint="995855253"
-        android:inputType="number"
-        android:textColor="@color/textColorPrimary"
-        android:layout_toRightOf="@+id/edit_cod_area" />
 
     <Button
-        android:id="@+id/btCadastrar"
-        android:layout_width="fill_parent"
+        android:id="@+id/bt_logar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit_cod_pais"
-        android:layout_marginTop="41dp"
+        android:layout_below="@+id/et_login_senha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/botao_cadastrar" />
+        android:text="Button"
+        android:textColor="@color/textColorPrimary"
+        tools:text="@string/botao_logar" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_logar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:onClick="abrirCadastroUsuario"
+        android:text="@string/texto_cadastre"
+        android:textColor="@color/textColorPrimary"
+        tools:onClick="abrirCadastroUsuario" />
+
 </RelativeLayout>
