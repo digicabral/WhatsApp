@@ -48,9 +48,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Button"
-        android:textColor="@color/textColorPrimary"
-        tools:text="@string/botao_logar" />
+        android:text="@string/botao_logar"
+        android:textColor="@color/textColorPrimary" />
 
     <TextView
         android:id="@+id/textView"
