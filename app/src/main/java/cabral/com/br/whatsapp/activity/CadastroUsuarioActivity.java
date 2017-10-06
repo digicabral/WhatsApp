@@ -12,6 +12,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 import cabral.com.br.whatsapp.R;
@@ -63,9 +66,31 @@ public class CadastroUsuarioActivity extends AppCompatActivity {
                     FirebaseUser userFirebase = task.getResult().getUser();
                     usuario.setId(userFirebase.getUid());
                     usuario.salvar();
+
+                    autenticacao.signOut();
+                    finish();
+
                 }
                 else{
-                    Toast.makeText(CadastroUsuarioActivity.this, "Erro ao cadastrar usuário", Toast.LENGTH_LONG).show();
+                    String erroExcecao = "";
+                    try{
+                        throw task.getException();
+                    }
+                    catch(FirebaseAuthWeakPasswordException e)
+                    {
+                        erroExcecao = "Sua senha deve conter masi caracteres, além de letras e numeros!";
+                    }
+                    catch(FirebaseAuthInvalidCredentialsException e){
+                        erroExcecao = "O e-mail digitado não é válido!";
+                    }
+                    catch(FirebaseAuthUserCollisionException e){
+                        erroExcecao = "Este e-mail já está em uso!";
+                    }
+                    catch(Exception e){
+                        erroExcecao = "Erro ao efetuar o cadastro!";
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(CadastroUsuarioActivity.this, "Erro: " + erroExcecao, Toast.LENGTH_LONG).show();
                 }
             }
         });
