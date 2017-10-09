@@ -49,7 +49,8 @@
         android:layout_marginTop="19dp"
         android:background="@color/colorPrimaryDark"
         android:text="@string/botao_logar"
-        android:textColor="@color/textColorPrimary" />
+        android:textColor="@color/textColorPrimary"
+        android:theme="@style/botaoPadrao"/>
 
     <TextView
         android:id="@+id/textView"
