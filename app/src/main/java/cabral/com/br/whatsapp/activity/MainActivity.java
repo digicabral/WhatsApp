@@ -1,6 +1,7 @@
 package cabral.com.br.whatsapp.activity;
 
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -44,11 +45,15 @@ public class MainActivity extends AppCompatActivity {
         slidingTabLayout = (SlidingTabLayout) findViewById(R.id.stl_tabs);
         viewPager = (ViewPager)findViewById(R.id.vp_pagina);
 
+        //Configurar SlidingTabs
+        slidingTabLayout.setDistributeEvenly(true);
+        slidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(this, R.color.colorAccent));
+
         //Configurar adapter
         TabAdapter tabAdapter = new TabAdapter(getSupportFragmentManager());
         viewPager.setAdapter(tabAdapter);
 
-        slidingTabLayout.setViewPager();
+        slidingTabLayout.setViewPager(viewPager);
 
     }
 
